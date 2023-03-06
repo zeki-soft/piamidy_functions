@@ -5,7 +5,10 @@ steps:
   - functions
   - deploy
   - hello
+  - --entry-point=com.zekisoft.PiamidyFunctions
   - --region=us-central1
   - --source=.
+  - --runtime=java11 
   - --trigger-http
-  - --runtime=java11
+  - --memory 256MB
+  - --allow-unauthenticated
