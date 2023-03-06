@@ -1,11 +1,11 @@
 steps:
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+- name: 'gcr.io/cloud-builders/gcloud'
   args:
   - gcloud
   - functions
   - deploy
   - hello
-#  - --entry-point=org.springframework.cloud.function.adapter.gcp.GcfJarLauncher
+  - --entry-point=com.zekisoft.PiamidyFunctions
   - --region=us-central1
   - --source=.
   - --runtime=java17
