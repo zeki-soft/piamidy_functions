@@ -10,5 +10,5 @@ steps:
   - --source=.
   - --runtime=java11 
   - --trigger-http
-  - --memory 256MB
+  - --memory=256MB
   - --allow-unauthenticated
