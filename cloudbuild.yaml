@@ -5,7 +5,7 @@ steps:
   - functions
   - deploy
   - hello
-  - --entry-point=org.springframework.cloud.function.adapter.gcp.GcfJarLauncher
+#  - --entry-point=org.springframework.cloud.function.adapter.gcp.GcfJarLauncher
   - --region=us-central1
   - --source=.
   - --runtime=java17
