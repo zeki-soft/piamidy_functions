@@ -7,7 +7,7 @@ steps:
   - hello
   - --entry-point=com.zekisoft.PiamidyFunctions
   - --region=us-central1
-  - --source=.
+  - --source=src/main/java
   - --runtime=java17
   - --trigger-http
   - --memory=256MB
