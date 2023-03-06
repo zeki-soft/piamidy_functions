@@ -61,6 +61,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!--
 			<plugin>
 				<groupId>com.google.cloud.functions</groupId>
 				<artifactId>function-maven-plugin</artifactId>
@@ -69,6 +70,7 @@
 					<functionTarget>com.zekisoft.PiamidyFunctions</functionTarget>
 				</configuration>
 			</plugin>
+			-->
 		</plugins>
 	</build>
 

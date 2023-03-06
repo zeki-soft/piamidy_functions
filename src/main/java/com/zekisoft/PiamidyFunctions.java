@@ -13,13 +13,14 @@ import reactor.core.publisher.Mono;
 
 @SpringBootApplication
 public class PiamidyFunctions {
+
     public static void main(String... args) {
         SpringApplication.run(PiamidyFunctions.class, args);
     }
 
     @Bean
     public Supplier<Mono<String>> hello() {
-        return () -> Mono.just("Hello Spring PiamidyFunctions!!");
+        return () -> Mono.just("Hello Spring PiamidyFunctions!!!!");
     }
 	
     @Bean
