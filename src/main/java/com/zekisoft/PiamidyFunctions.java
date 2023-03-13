@@ -24,6 +24,11 @@ public class PiamidyFunctions {
     }
 	
     @Bean
+    public Supplier<Mono<String>> hello2() {
+        return () -> Mono.just("Hello Spring PiamidyFunctions2!!!!");
+    }
+	
+    @Bean
     public Function<Mono<String>, Mono<String>> decorate() {
         return message -> message.map(m -> String.format("★★★%s★★★", m));
     }
