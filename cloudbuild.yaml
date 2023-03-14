@@ -4,11 +4,10 @@ steps:
   - gcloud
   - functions
   - deploy
-  - hello
-  - --entry-point=com.zekisoft.PiamidyFunctions
-  - --region=us-central1
-  - --source=src/main/java
+  - piamidy_functions
+  - --entry-point=org.springframework.cloud.function.adapter.gcp.GcfJarLauncher
   - --runtime=java17
   - --trigger-http
+  - --source=src/main/java 
   - --memory=256MB
   - --allow-unauthenticated

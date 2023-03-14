@@ -1,0 +1,29 @@
+# ディレクトリ移動
+cd C:\Users\hatoi\git\piamidy_functions
+
+# デプロイコマンド ----------------------------------------------------------------------------------------------------
+
+# ログイン
+gcloud auth login
+
+# アカウント一覧
+gcloud auth list
+
+# パッケージ作成(デプロイ準備)
+mvn package
+
+# デプロイコマンド
+gcloud functions deploy piamidy_functions --entry-point org.springframework.cloud.function.adapter.gcp.GcfJarLauncher --runtime java17 --trigger-http --source target/deploy --memory 256MB --allow-unauthenticated
+
+
+# テストコマンド ----------------------------------------------------------------------------------------------------
+
+curl -X POST https://us-central1-zekisoft-340512.cloudfunctions.net/piamidy_functions/hello
+
+curl -X POST https://us-central1-zekisoft-340512.cloudfunctions.net/piamidy_functions/hello2
+
+
+curl http://192.168.0.20:8080/hello -d "hello=123"
+curl http://192.168.0.20:8080/hello2 -d "hello=123"
+
+curl https://us-central1-zekisoft-340512.cloudfunctions.net/piamidy_functions -d "hello=123"
